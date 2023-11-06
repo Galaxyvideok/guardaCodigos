@@ -1,6 +1,7 @@
-/*Tarefa: Escreva uma função em C chamada calcular_fatorial que 
-utilize recursão para calcular o fatorial de um número inteiro não 
-negativo n. Certifique-se de tratar o caso base.*/
+/* Implemente uma função recursiva em C chamada potencia que calcule a 
+elevado à potência b, onde a e b são números inteiros positivos. 
+Certifique-se de tratar os casos especiais, como quando b é 
+zero (a^0 = 1) e quando a é zero (0^b = 0).*/
 
 #include <stdio.h>
 #include <stdlib.h>
