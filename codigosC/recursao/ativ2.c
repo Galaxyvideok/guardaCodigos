@@ -14,6 +14,10 @@ zero (a^0 = 1) e quando a é zero (0^b = 0).*/
 int potencia(int base, int expoente){
     if (expoente == 1){
         return base;
+    }else if (expoente == 0){
+        return 1;
+    }else if (base == 0){
+        return 0;
     }else{
         return base * potencia(base,expoente-1);
     }
