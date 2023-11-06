@@ -25,7 +25,7 @@ int main(){
     scanf("%d", &n);
     res = fatorial(n);
     printf("\n%s\n", RESULTADO);
-    printf("O maior do vetor e: %d\n",res);
+    printf("O fatorial de %d e: %d\n",n,res);
     printf("\n%s\n", CORTE);
     return 0;
 }

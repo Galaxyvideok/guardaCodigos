@@ -11,22 +11,24 @@ zero (a^0 = 1) e quando a é zero (0^b = 0).*/
 #define RESULTADO "-----------RESULTADO-----------"
 #define CORTE "-------------------------------------"
 
-int fatorial(int n){
-    if (n == 0){
-        return 1;
+int potencia(int base, int expoente){
+    if (expoente == 1){
+        return base;
     }else{
-        return n * fatorial(n-1);
+        return base * potencia(base,expoente-1);
     }
 }
 
 int main(){
-    int res,n;
+    int res, a, b;
     printf("\n%s\n", INICIO);
-    printf("Digite o valor de n: ");
-    scanf("%d", &n);
-    res = fatorial(n);
+    printf("Digite um numero inteiro: ");
+    scanf("%d", &a);
+    printf("Digite o expoente desse numero: ");
+    scanf("%d", &b);
     printf("\n%s\n", RESULTADO);
-    printf("O maior do vetor e: %d\n",res);
+    res = potencia(a,b);
+    printf("A potencia %d^%d e: %d\n",a,b,res);
     printf("\n%s\n", CORTE);
     return 0;
 }
