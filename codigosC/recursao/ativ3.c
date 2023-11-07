@@ -11,23 +11,27 @@ existem cinco maneiras de representá-lo: 4, 3+1, 2+2, 2+1+1 e 1+1+1+1.*/
 #define RESULTADO "-----------RESULTADO-----------"
 #define CORTE "-------------------------------------"
 
-int contagemModo(int n){
+int contagemModo(int n, int cont){
     if (n == 1){
         return 1;
     }else{
-        return 1 + contagemModo(n-1);
+        if (n % 2 == 0){
+            return 1 + contagemModo(n-1, cont);
+        }else{
+            return 2 + contagemModo(n-1, cont);
+        }
     } 
 }
 
 int main(){
     int res, n;
-    // int cont;
+    int cont;
     printf("\n%s\n", INICIO);
     printf("Digite um numero inteiro: ");
     scanf("%d", &n);
-    // cont = 0;
+    cont = 1;
     printf("\n%s\n", RESULTADO);
-    res = contagemModo(n);
+    res = contagemModo(n, cont);
     printf("A quantidade de modos que %d pode ser escrito e: %d\n",n,res);
     printf("\n%s\n", CORTE);
     return 0;
