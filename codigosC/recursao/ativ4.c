@@ -23,7 +23,7 @@ int pesquisar(int *vet, int quanti, int pesq){
 int main(){
     int res, n;
     int vet[10] = {20,50,21,27,57,60,80,91,2,1};
-    int quanti = 5;
+    int quanti = 10;
     printf("\n%s\n", INICIO);
     printf("Digite o numero que voce deseja pesquisar: ");
     scanf("%d", &n);
