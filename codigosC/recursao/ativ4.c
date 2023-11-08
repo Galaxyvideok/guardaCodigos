@@ -11,8 +11,7 @@ ele estiver no array, ou -1 se o elemento não for encontrado.*/
 #define CORTE "-------------------------------------"
 
 int pesquisar(int *vet, int quanti, int pesq){
-    quanti--;
-    if (quanti == 0){
+    if (quanti < 0){
         return -1;
     }else if (vet[quanti] == pesq){
         return quanti;
