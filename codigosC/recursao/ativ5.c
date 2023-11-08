@@ -24,20 +24,28 @@ void começar(int numDiscos, int *torre){
     }
 }
 
-int torreHanoi(int numDiscos, int *torreOrigem, int *torreAuxiliar, int *torreDestino){
-
+void torreHanoi(int numDiscos, char torreOrigem, char torreAuxiliar, char torreDestino){
+    if (numDiscos == 1){
+        printf("Mover de %c para %c \n",torreOrigem,torreDestino);
+    }else{
+        torreHanoi(numDiscos-1,torreOrigem,torreAuxiliar,torreDestino);
+        printf("Mover de %c para %c \n",torreOrigem,torreDestino);
+        torreHanoi(numDiscos-1,torreAuxiliar,torreDestino,torreOrigem);
+    }
+    
+    
 }
 
 int main(){
     int res, numDiscos, quanti;
-    int torreOrigem[MAX];
-    int torreAuxiliar[MAX];
-    int torreDestino[MAX];
+    char torreOrigem = '1';
+    char torreAuxiliar = '2';
+    char torreDestino = '3';
     printf("\n%s\n", INICIO);
     printf("Digite o numero de discos: ");
     scanf("%d", &numDiscos);
     começar(numDiscos,torreOrigem);
-    res = torreHanoi(numDiscos,torreOrigem,torreAuxiliar,torreDestino);
+    torreHanoi(numDiscos,torreOrigem,torreAuxiliar,torreDestino);
     printf("\n%s\n", RESULTADO);
     
     printf("\n%s\n", CORTE);
