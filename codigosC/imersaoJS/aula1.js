@@ -1,1 +1,1 @@
-console.log("Hello world");
+alert('Prática na Imersão!')
