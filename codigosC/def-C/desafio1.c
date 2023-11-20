@@ -6,13 +6,13 @@
 #include <string.h>
 #include <ctype.h>
 
-#define TAM 63 // Tamanho do alfabeto ASCII de 64 a 126
+#define TAM 63 
 #define TAM2 1000
 
 void criptografar(char *frase, int quanti, int *resposta) {
     int i;
     for (i = 0; i < quanti; i++) {
-        resposta[i] = (int)frase[i] + 1; // Incrementa 1 no valor ASCII de cada caractere
+        resposta[i] = (int)frase[i] + 1; 
     }
 }
 
@@ -36,7 +36,6 @@ int main() {
     scanf(" %999[^\n]", frase);
     int quanti = strlen(frase);
     int resposta[TAM2];
-    
     do {
         op = menu();
         switch (op) {
@@ -47,7 +46,7 @@ int main() {
                     printf("%c", resposta[i]);
                 }
                 printf("\n");
-                break; //bbbgfrvfr
+                break; 
 
             case 2:
                 // descriptografar(frase,quanti,alfabeto,resposta);
