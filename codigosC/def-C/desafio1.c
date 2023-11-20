@@ -44,6 +44,7 @@ int main() {
     scanf(" %999[^\n]s", frase);
     int quanti = strlen(frase);
     int resposta[TAM2];
+    int resposta2[TAM2];
     do {
         op = menu();
         switch (op){
@@ -57,10 +58,10 @@ int main() {
                 break; 
 
             case 2:
-                descriptografar(frase,quanti,resposta);
+                descriptografar(frase,quanti,resposta2);
                 printf("A resposta é: ");
                 for (int i = 0; i < quanti; i++) {
-                    printf("%c", frase[i]);
+                    printf("%c", resposta[i]);
                 }
                 printf("\n");
                 break;
@@ -72,8 +73,8 @@ int main() {
             default:
                 break;
         }
-        return 0;
+        printf("Digite a frase: ");
+        scanf(" %999[^\n]s", frase);
     } while ((op >= 1) || (op <= 3));
-
     return 0;
 }
