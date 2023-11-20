@@ -47,7 +47,7 @@ int main() {
                     printf("%c", resposta[i]);
                 }
                 printf("\n");
-                break;
+                break; //bbbgfrvfr
 
             case 2:
                 // descriptografar(frase,quanti,alfabeto,resposta);
