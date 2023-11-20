@@ -16,6 +16,14 @@ void criptografar(char *frase, int quanti, int *resposta) {
     }
 }
 
+void descriptografar(char *frase, int quanti, int *resposta){
+    int i;
+    for (i = 0; i < quanti; i++){
+        resposta[i] = (int)frase[i] - 1;
+    }
+    
+}
+
 int menu() {
     int op;
     printf("\n\nMENU\n\n");
@@ -24,7 +32,7 @@ int menu() {
     printf("3 - Sair\n");
     do {
         printf("Escolha sua opção: ");
-        scanf(" %d", &op);
+        scanf("%d", &op);
     } while(op < 1 || op > 3);
     return op;
 }
@@ -33,12 +41,12 @@ int main() {
     int op;
     char frase[TAM2];
     printf("Digite a frase: ");
-    scanf(" %999[^\n]", frase);
+    scanf(" %999[^\n]s", frase);
     int quanti = strlen(frase);
     int resposta[TAM2];
     do {
         op = menu();
-        switch (op) {
+        switch (op){
             case 1:
                 criptografar(frase, quanti, resposta);
                 printf("A resposta é: ");
@@ -49,7 +57,12 @@ int main() {
                 break; 
 
             case 2:
-                // descriptografar(frase,quanti,alfabeto,resposta);
+                descriptografar(frase,quanti,resposta);
+                printf("A resposta é: ");
+                for (int i = 0; i < quanti; i++) {
+                    printf("%c", frase[i]);
+                }
+                printf("\n");
                 break;
 
             case 3:
@@ -60,7 +73,7 @@ int main() {
                 break;
         }
         return 0;
-    } while (op > 0 || op > 4);
+    } while ((op >= 1) || (op <= 3));
 
     return 0;
 }
