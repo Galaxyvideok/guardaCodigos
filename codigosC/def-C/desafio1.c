@@ -21,6 +21,13 @@ void descriptografar(char *frase, int quanti, int *resposta){
     for (i = 0; i < quanti; i++){
         resposta[i] = (int)frase[i] - 1;
     }
+}
+
+void restaurar(char *frase, int quanti, int *resposta){
+    int i;
+    for (i = 0; i < quanti; i++){
+        frase[i] = resposta[i];
+    }
     
 }
 
@@ -40,6 +47,7 @@ int menu() {
 int main() {
     int op;
     char frase[TAM2];
+    char frase2[TAM2];
     printf("Digite a frase: ");
     scanf(" %999[^\n]s", frase);
     int quanti = strlen(frase);
@@ -55,13 +63,14 @@ int main() {
                     printf("%c", resposta[i]);
                 }
                 printf("\n");
+                restaurar(frase2,quanti,resposta);
                 break; 
 
             case 2:
-                descriptografar(frase,quanti,resposta2);
+                descriptografar(frase2,quanti,resposta2);
                 printf("A resposta é: ");
                 for (int i = 0; i < quanti; i++) {
-                    printf("%c", resposta[i]);
+                    printf("%c", resposta2[i]);
                 }
                 printf("\n");
                 break;
@@ -73,8 +82,6 @@ int main() {
             default:
                 break;
         }
-        printf("Digite a frase: ");
-        scanf(" %999[^\n]s", frase);
     } while ((op >= 1) || (op <= 3));
     return 0;
 }
