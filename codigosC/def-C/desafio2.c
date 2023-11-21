@@ -13,8 +13,7 @@ de busca de padrões.*/
 #define MAX 10000
 
 int pesquisar(char *texto, int quanti1, char *palavra, int quanti2){
-    int i,j = 0, recebe = 0, guarda, res = 0;
-    char fragmento[quanti2];
+    int i,j = 0, recebe = 0, res = 0;
     for (i = 0; i < quanti1; i++){
         if (texto[i] == palavra[j]){
             j++;
