@@ -78,7 +78,7 @@ int main() {
     printf("\n%s\n", INICIO);
     printf("Qual e o tamanho maximo da fila de processos?: ");
     scanf("%d", &quanti);
-    startLista(pri1,pri2,pri3,quanti);
+    startLista(&pri1,&pri2,&pri3,quanti);
     //imprimir o que esta em execuçao
     do{
         op = menu();
