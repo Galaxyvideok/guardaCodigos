@@ -35,17 +35,26 @@ void startLista(Processo **lista1, Processo **lista2, Processo **lista3, int qua
     }
 }
 
-void imprimirLista(Processo *lista1, Processo *lista2, Processo *lista3, int quanti){
+void impresao(Processo *lista, int quanti, int desci){
     int i;
-    printf("| Prioridade 1: ");
-    for (i = 0; i < quanti; i++){
-        if (lista1[i].indicador != 0){
-            /* code */
-        }
-        
-        
+    if (desci == 0){
+        printf("| Prioridade 1: ");  
+    }else if (desci == 1){
+        printf("| Prioridade 2: ");
+    }else{
+        printf("| Prioridade 3: ");
     }
-    
+    for (i = 0; i < quanti; i++){
+        if (lista[i].indicador == 1){
+            printf(" %d ", lista[i].indicador);
+        }
+    }
+}
+
+void imprimirLista(Processo *lista1, Processo *lista2, Processo *lista3, int quanti){
+    impresao(lista1,quanti,0);
+    impresao(lista2,quanti,1);
+    impresao(lista3,quanti,2);
 }
 
 int menu() {
