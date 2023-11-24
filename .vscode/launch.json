@@ -7,9 +7,15 @@
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
+<<<<<<< HEAD
       "externalConsole": true,
       "cwd": "c:/Users/Pichau/Documents/vs/guardaCodigos/codigosC/def-C",
       "program": "c:/Users/Pichau/Documents/vs/guardaCodigos/codigosC/def-C/build/Debug/outDebug",
+=======
+      "externalConsole": false,
+      "cwd": "/home/lucas/Vídeos/guardaCodigos/codigosC/def-C",
+      "program": "/home/lucas/Vídeos/guardaCodigos/codigosC/def-C/build/Debug/outDebug",
+>>>>>>> 50e7e2e016df3f3cc321fdd12e9fe8d5366a1a4a
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
