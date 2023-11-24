@@ -138,12 +138,14 @@ int main() {
     int quanti;
     int op;
     int numCiclos = 0;
+    int guarda = numCiclos;
     printf("\n%s\n", INICIO);
     printf("Qual e o tamanho maximo da fila de processos?: ");
     scanf("%d", &quanti);
     startLista(&pri1,&pri2,&pri3,quanti);
     do{
-        //imprimir o que esta em execuçao
+        imprimirLista(pri1,pri2,pri3,quanti,&numCiclos);
+        printf("Ja se passaram: %d ciclos de clock", guarda);
         op = menu();
         switch (op){
         case 1:
@@ -159,6 +161,11 @@ int main() {
         
         case 3:
             return 0;
+            break;
+        
+        case 4:
+            guarda++;
+            numCiclos++;
             break;
         
         default:
