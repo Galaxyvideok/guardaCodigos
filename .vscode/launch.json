@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/Pichau/Documents/vs/guardaCodigos/codigosC/def-C",
-      "program": "c:/Users/Pichau/Documents/vs/guardaCodigos/codigosC/def-C/build/Debug/outDebug",
+      "cwd": "c:/Users/Pichau/Documents/vs/guardaCodigos/testes",
+      "program": "c:/Users/Pichau/Documents/vs/guardaCodigos/testes/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

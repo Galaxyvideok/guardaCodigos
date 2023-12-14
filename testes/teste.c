@@ -305,14 +305,14 @@ void atualizarHeap(int *vetor, int quanti, int indiceRaiz){
         }
     }
     if (vetor[max] > vetor[indiceRaiz]){
-        trocar2(&vetor[max], &vetor[indiceRaiz]);
-        atualizarHeap(vetor, quanti, max);
+        trocar2(&vetor[max],&vetor[indiceRaiz]);
+        atualizarHeap(vetor,quanti,max);
     }
 }
 
 void contruirHeap(int *vetor, int quanti){
     int i;
-    for (i = quanti/2 - 1; i >= 0; i--){
+    for (i = quanti/2; i >= 0; i--){
         atualizarHeap(vetor,quanti,i);
     }
 }
@@ -320,7 +320,7 @@ void contruirHeap(int *vetor, int quanti){
 void heapSort(int *vetor, int quanti){
     int i;
     contruirHeap(vetor,quanti);
-    for (i = quanti-1; i > 0; i--){
+    for (i = quanti - 1; i > 0; i--){
         trocar2(&vetor[i],&vetor[0]);
         atualizarHeap(vetor,i,0);
     }
@@ -354,28 +354,27 @@ void intercalar(int *vetor, int ini1, int fim1, int ini2, int fim2){
     int i1 = ini1;
     int i2 = ini2;
     int k = 0;
-    while ((i1 <= fim1) && (i2 <= fim2)) {
+    while ((i1 <= fim1)&&(i2 <= fim2)){
         if (vetor[i1] <= vetor[i2]){
             vetorAux[k] = vetor[i1];
-            k++;
             i1++;
-        } else {
-            vetorAux[k] = vetor[i2];
             k++;
+        }else{
+            vetorAux[k] = vetor[i2];
             i2++;
+            k++;
         }
     }
     while (i1 <= fim1){
         vetorAux[k] = vetor[i1];
-        k++;
         i1++;
+        k++;
     }
     while (i2 <= fim2){
         vetorAux[k] = vetor[i2];
-        k++;
         i2++;
+        k++;
     }
-    // Copiar blocos de memória
     memcpy(&vetor[ini1], vetorAux, tam * sizeof(int));
     free(vetorAux);
 }   
