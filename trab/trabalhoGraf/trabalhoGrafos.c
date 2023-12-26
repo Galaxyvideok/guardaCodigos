@@ -17,7 +17,7 @@
 
 #define INICIO "--------INICIO--------"
 #define RESULTADO "-----------RESULTADO-----------"
-#define CORTE "-------------------------------------"
+#define CORTE "---------------------------------"
 #define MAX 13
 #define TAM 30
 #define INFINITO 9999.99
